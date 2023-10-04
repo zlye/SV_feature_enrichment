@@ -1,2 +1,3 @@
 # SV_feature_enrichment
-feature enrichment analysis of structural variation
+Feature enrichment analysis of structural variation
+Requires pybedtools
