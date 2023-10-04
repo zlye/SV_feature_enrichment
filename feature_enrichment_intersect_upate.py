@@ -7,13 +7,17 @@ import pandas as pd
 import itertools
 import datetime
 
-# Use simulations with pybedtools to look for enrichment of
-# certain features
+# Create simulated overlaps with pybedtools to test for enrichment of genomic features in SV dataset
+# Input:
+# ggf file of genomic features
+# SVs intervals
+# fai file (genome index)
+# outputs: enrichment scores for each type of structural variant and genomic feature
 
-gff_path = "/Users/zoelye/Documents/CNV_215_indicaref/R498_refgenome/R498_IGDBv3_coreset.gff"
-data_path = "/Users/zoelye/Documents/CNV_215_indicaref/merged_results/merged_duphold_overlap_filter_tableformat.txt"
-fai = "/Users/zoelye/Documents/CNV_215_indicaref/R498_refgenome/R498_Chr.fasta.fai"
-outfile = "/Users/zoelye/Documents/CNV_215_indicaref/feature_enrichment/SV_iter5000"
+gff_path = "<genome_annotation.gff>"
+data_path = "<SV_intervals.txt>"
+fai = "<genome.fasta.fai>"
+outfile = "results.txt"
 
 minlen = 50
 maxlen = 100000
